@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.jsdelivr.net/npm/mpegts.js@latest"></script>
+</head>
+<body>
+
+<video id="video" controls autoplay style="width:100%"></video>
+
+<script>
+var player = mpegts.createPlayer({
+    type: 'mpegts',
+    isLive: true,
+    url: 'http://appluxera.com/live/94748049499/625256262633/418111.ts'
+});
+player.attachMediaElement(document.getElementById('video'));
+player.load();
+player.play();
+</script>
+
+</body>
+</html>
